@@ -30,9 +30,11 @@ class robo_sky_com(Node):
         self.manoeuvresub=self.create_subscription(eim.ManoeuvreExec,'manoeuvre_exec',10)
         self.positionsub=self.create_subscription(eim.Position,'position_json',10)
         self.manoeuvresub=self.create_subscription(eim.Status,'status',10)
-        self.manoeuvresub=self.create_subscription(eim.SafetyStatus,'safety_stat',10)
-        self.manoeuvresub=self.create_subscription(eim.TableStatus,'table_stat',10)
-            
+        self.safetysub=self.create_subscription(eim.SafetyStatus,'safety_stat',10)
+        self.tablesub=self.create_subscription(eim.TableStatus,'table_stat',10)
+        self.manoeuvresub=self.create_publisher(eim.Manoeuvre,'Manoeuvre',10)
+
+
 def main(args=None):
     rclpy.init(args=args)
     robo_to_sky= robo_sky_com()
