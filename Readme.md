@@ -55,3 +55,4 @@ connection_id is "00000000-0000-0000-0000-000000000000" for brand new connection
 ## Ros Diagrams
 
 ### High Level Diagram
+![Sky_control](https://github.com/eiratechrobotics/sky_control/assets/156085267/22fdd1f1-ccf2-4b5a-9e87-a949de9b5828)
